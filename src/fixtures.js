@@ -547,3 +547,22 @@ export const scores = [
     awayScore: 1,
   },
 ];
+
+export const upcomingWeekMatches = [
+  {
+    homeTeam: 'IBM',
+    awayTeam: 'Arrow',
+  },
+  {
+    homeTeam: 'Primost',
+    awayTeam: 'Sterling',
+  },
+  {
+    homeTeam: 'FedEx',
+    awayTeam: 'Teva',
+  },
+  {
+    homeTeam: 'Corgi.pro',
+    awayTeam: 'Avenade',
+  },
+];

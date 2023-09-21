@@ -14,8 +14,8 @@ const UpcomingWeek = ({ schedule, maxScore }) => {
         <TableHead>
           <TableRow>
             <TableCell align='right'>Home team</TableCell>
-            <TableCell align='right'>Home score</TableCell>
-            <TableCell align='left'>Away score</TableCell>
+            <TableCell align='right'></TableCell>
+            <TableCell align='left'></TableCell>
             <TableCell align='left'>Away team</TableCell>
           </TableRow>
         </TableHead>

@@ -130,14 +130,12 @@ const App = () => {
             <Typography>Logi</Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography>
-              <div>
-                {currentPrediction.map((prediction) => (
-                  <p>{prediction}</p>
-                ))}
-              </div>
-              <pre>{JSON.stringify(latestPrediction)}</pre>
-            </Typography>
+            {currentPrediction.map((prediction, index) => (
+              <Typography key={`${index}-${prediction}`}>
+                {prediction}
+              </Typography>
+            ))}
+            <Typography>{JSON.stringify(latestPrediction)}</Typography>
           </AccordionDetails>
         </Accordion>
       </div>

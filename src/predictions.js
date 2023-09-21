@@ -113,27 +113,6 @@ export const parseHistoricalData = () => {
     { matchup: [], scores: [] }
   );
 };
-// const matchup = [
-//   { homeTeam: 'Teva', awayTeam: 'IBM' },
-//   { homeTeam: 'Sterling', awayTeam: 'PKO' },
-//   { homeTeam: 'Primost', awayTeam: 'Avenade' },
-//   { homeTeam: 'Fedex', awayTeam: 'Arrow' },
-//   { homeTeam: 'Corgi', awayTeam: 'Primost' },
-//   { homeTeam: 'Avenade', awayTeam: 'Teva' },
-//   { homeTeam: 'Sterling', awayTeam: 'Arrow' },
-//   { homeTeam: 'IBM', awayTeam: 'PKO' },
-// ];
-
-// const scores = [
-//   { homeScore: 5, awayScore: 4 },
-//   { homeScore: 7, awayScore: 3 },
-//   { homeScore: 7, awayScore: 3 },
-//   { homeScore: 3, awayScore: 1 },
-//   { homeScore: 2, awayScore: 2 },
-//   { homeScore: 2, awayScore: 2 },
-//   { homeScore: 10, awayScore: 1 },
-//   { homeScore: 6, awayScore: 0 },
-// ];
 
 const net = new brain.NeuralNetwork({ hiddenLayers: [4] });
 
@@ -143,7 +122,7 @@ export const train = () => {
   return new Promise((resolve, reject) => {
     try {
       const maxValue = getMaxValue(scores);
-      for (let i = 0; i < matchup.length; i++) {
+      for (let i = 0; i < 24; i++) {
         trainingData.push({
           input: {
             homeTeam: getTeamId(matchup[i].homeTeam),
